@@ -6,7 +6,12 @@
 
 %% Setup
 % Add the matlab folder to the path so miKnn.m is accessible
-addpath('matlab');
+% We use the full path relative to the script's own location
+% so it works regardless of where MATLAB is called from
+script_dir = fileparts(mfilename('fullpath'));
+project_root = fileparts(script_dir);
+addpath(script_dir);
+cd(project_root);
 
 % Set estimator options to match Python defaults
 options.K = 2;
