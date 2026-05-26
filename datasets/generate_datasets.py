@@ -126,13 +126,11 @@ def save_dataset(x, y, true_mi, filename):
     
     # Save as CSV with header
     # fmt='%.18e' saves full double precision so no information is lost
-    np.savetxt(filename, data, delimiter=',', header='x,y',
-               fmt='%.18e', comments='')
+    np.savetxt(filename, data, delimiter=',', header='x,y', fmt='%.18e', comments='')
     
     # Save the true MI value in a separate file next to the CSV
     mi_filename = filename.replace('.csv', '_true_mi.txt')
-    with open(mi_filename, 'w') as f:
-        f.write(f'{true_mi:.18e}\n')
+    with open(mi_filename, 'w') as f: f.write(f'{true_mi:.18e}\n')
     
     print(f"Saved: {filename}")
     print(f"Saved: {mi_filename}")
