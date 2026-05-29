@@ -1,0 +1,55 @@
+
+
+<style>
+    .ksg-table {
+        border-collapse: collapse;
+        font-family: monospace;
+        font-size: 11px;
+        width: 100%;
+    }
+    .ksg-table caption {
+        font-size: 13px;
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: left;
+        margin-bottom: 8px;
+        font-family: Arial, sans-serif;
+    }
+    .ksg-table th {
+        background-color: #2c3e50;
+        color: white;
+        padding: 8px 10px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+    .ksg-table th.corner {
+        background-color: #1a252f;
+        font-style: italic;
+        font-size: 11px;
+        text-align: center;
+    }
+    .ksg-table td {
+        padding: 6px 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    .ksg-table td.summary {
+        background-color: #eaf0fb;
+        font-weight: bold;
+    }
+    .ksg-table tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+    .ksg-table tr:nth-child(even) td.summary {
+        background-color: #ddeaf7;
+    }
+    .ksg-table tr:hover td {
+        background-color: #f0f4f8;
+    }
+</style>
+
+<table class="ksg-table">
+    <caption>KSG Estimator Runtime Scaling Analysis - N=250 to N=3,000 (10 trials each, times in seconds)</caption>
+    <thead><tr><th class="corner">N / Trial</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th><th>Trial 4</th><th>Trial 5</th><th>Trial 6</th><th>Trial 7</th><th>Trial 8</th><th>Trial 9</th><th>Trial 10</th><th>Mean (s)</th><th>Median (s)</th><th>Min (s)</th><th>Max (s)</th><th>Std (s)</th></tr></thead>
+    <tbody><tr><th>250</th><td class="">0.003412</td><td class="">0.003052</td><td class="">0.001951</td><td class="">0.001380</td><td class="">0.001330</td><td class="">0.001646</td><td class="">0.001380</td><td class="">0.001506</td><td class="">0.001830</td><td class="">0.001733</td><td class="summary">0.001922</td><td class="summary">0.001733</td><td class="summary">0.001330</td><td class="summary">0.003412</td><td class="summary">0.000749</td></tr><tr><th>500</th><td class="">0.006039</td><td class="">0.005669</td><td class="">0.005543</td><td class="">0.004918</td><td class="">0.004840</td><td class="">0.005521</td><td class="">0.004691</td><td class="">0.004762</td><td class="">0.005527</td><td class="">0.004744</td><td class="summary">0.005225</td><td class="summary">0.005225</td><td class="summary">0.004691</td><td class="summary">0.006039</td><td class="summary">0.000485</td></tr><tr><th>750</th><td class="">0.013787</td><td class="">0.012451</td><td class="">0.011707</td><td class="">0.011907</td><td class="">0.011638</td><td class="">0.011508</td><td class="">0.011508</td><td class="">0.011635</td><td class="">0.011503</td><td class="">0.011671</td><td class="summary">0.011932</td><td class="summary">0.011671</td><td class="summary">0.011503</td><td class="summary">0.013787</td><td class="summary">0.000792</td></tr><tr><th>1000</th><td class="">0.027963</td><td class="">0.022361</td><td class="">0.021493</td><td class="">0.022371</td><td class="">0.021425</td><td class="">0.021400</td><td class="">0.022080</td><td class="">0.021704</td><td class="">0.021284</td><td class="">0.021257</td><td class="summary">0.022334</td><td class="summary">0.021704</td><td class="summary">0.021257</td><td class="summary">0.027963</td><td class="summary">0.002303</td></tr><tr><th>1250</th><td class="">0.049164</td><td class="">0.034700</td><td class="">0.033776</td><td class="">0.033642</td><td class="">0.034163</td><td class="">0.034101</td><td class="">0.035121</td><td class="">0.036247</td><td class="">0.035260</td><td class="">0.035416</td><td class="summary">0.036159</td><td class="summary">0.035121</td><td class="summary">0.033642</td><td class="summary">0.049164</td><td class="summary">0.005292</td></tr><tr><th>1500</th><td class="">0.059772</td><td class="">0.052340</td><td class="">0.050222</td><td class="">0.054358</td><td class="">0.053017</td><td class="">0.052476</td><td class="">0.052100</td><td class="">0.052418</td><td class="">0.052123</td><td class="">0.051654</td><td class="summary">0.053048</td><td class="summary">0.052418</td><td class="summary">0.050222</td><td class="summary">0.059772</td><td class="summary">0.002944</td></tr><tr><th>1750</th><td class="">0.086631</td><td class="">0.072386</td><td class="">0.071587</td><td class="">0.071021</td><td class="">0.071461</td><td class="">0.071085</td><td class="">0.070855</td><td class="">0.070797</td><td class="">0.070861</td><td class="">0.072707</td><td class="summary">0.072939</td><td class="summary">0.071461</td><td class="summary">0.070797</td><td class="summary">0.086631</td><td class="summary">0.005542</td></tr><tr><th>2000</th><td class="">0.168704</td><td class="">0.091684</td><td class="">0.089888</td><td class="">0.089773</td><td class="">0.089850</td><td class="">0.092997</td><td class="">0.095452</td><td class="">0.094257</td><td class="">0.090200</td><td class="">0.094957</td><td class="summary">0.099776</td><td class="summary">0.092997</td><td class="summary">0.089773</td><td class="summary">0.168704</td><td class="summary">0.027771</td></tr><tr><th>2250</th><td class="">0.161355</td><td class="">0.119513</td><td class="">0.118601</td><td class="">0.119463</td><td class="">0.122821</td><td class="">0.118047</td><td class="">0.115727</td><td class="">0.115114</td><td class="">0.115191</td><td class="">0.116784</td><td class="summary">0.122262</td><td class="summary">0.118601</td><td class="summary">0.115114</td><td class="summary">0.161355</td><td class="summary">0.015895</td></tr><tr><th>2500</th><td class="">0.196510</td><td class="">0.164372</td><td class="">0.151646</td><td class="">0.146383</td><td class="">0.148942</td><td class="">0.148408</td><td class="">0.146844</td><td class="">0.194091</td><td class="">0.144469</td><td class="">0.143147</td><td class="summary">0.158481</td><td class="summary">0.148942</td><td class="summary">0.143147</td><td class="summary">0.196510</td><td class="summary">0.020496</td></tr><tr><th>2750</th><td class="">0.225563</td><td class="">0.185955</td><td class="">0.186533</td><td class="">0.175859</td><td class="">0.174512</td><td class="">0.175435</td><td class="">0.187741</td><td class="">0.181545</td><td class="">0.175435</td><td class="">0.174003</td><td class="summary">0.184258</td><td class="summary">0.181545</td><td class="summary">0.174003</td><td class="summary">0.225563</td><td class="summary">0.017368</td></tr><tr><th>3000</th><td class="">0.413850</td><td class="">0.242557</td><td class="">0.258337</td><td class="">0.255446</td><td class="">0.216301</td><td class="">0.210119</td><td class="">0.208480</td><td class="">0.208436</td><td class="">0.208467</td><td class="">0.222537</td><td class="summary">0.244453</td><td class="summary">0.222537</td><td class="summary">0.208436</td><td class="summary">0.413850</td><td class="summary">0.070676</td></tr></tbody>
+</table>
